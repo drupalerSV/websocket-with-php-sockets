@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1 id="understanding-php-sockets-and-the-websocket-api-in-javascript">Understanding PHP Sockets and the WebSocket API
+    in JavaScript</h1>
+<h2 id="introduction">Introduction</h2>
+<p>WebSockets are essential for real-time web applications, enabling persistent, full-duplex communication between a
+    client and a server. While PHP is not typically known for real-time applications, it provides socket functionalities
+    that allow developers to create WebSocket servers. In this blog, we will explore PHP sockets, the WebSocket API in
+    JavaScript, and how a simple PHP-based WebSocket server can be implemented using a reference package.</p>
+<h2 id="why-use-websockets">Why Use WebSockets?</h2>
+<p>Unlike traditional HTTP, which follows a request-response model, WebSockets allow bidirectional communication without
+    repeatedly polling the server. This is useful for applications like:</p>
+<ul>
+    <li>Chat applications</li>
+    <li>Real-time notifications</li>
+    <li>Collaborative tools</li>
+    <li>Live data streaming (stock prices, sports scores, etc.)</li>
+</ul>
+<h2 id="understanding-php-sockets">Understanding PHP Sockets</h2>
+<p>PHP provides a set of functions to create and manage sockets, including:</p>
+<ul>
+    <li><code>socket_create()</code>: Creates a new socket.</li>
+    <li><code>socket_bind()</code>: Binds the socket to an IP and port.</li>
+    <li><code>socket_listen()</code>: Listens for incoming connections.</li>
+    <li><code>socket_accept()</code>: Accepts a client connection.</li>
+    <li><code>socket_read()</code>: Reads data from a socket.</li>
+    <li><code>socket_write()</code>: Sends data to a socket.</li>
+    <li><code>socket_close()</code>: Closes a socket connection.</li>
+</ul>
+<p>These functions allow PHP to establish low-level TCP connections, which can be extended to support the WebSocket
+    protocol.</p>
+<h2 id="the-websocket-api-in-javascript">The WebSocket API in JavaScript</h2>
+<p>The WebSocket API provides a simple way to interact with WebSocket servers using JavaScript. A WebSocket connection
+    can be established as follows:</p>
+<img src="https://svinfotech.net/sites/default/files/2025-02/client.png" alt="client">
+<p>
+    <a href="https://github.com/CHANCENY/sockets/blob/main/client.php" target="_blank">See client code example</a>
+</p>
+<p>This JavaScript code connects to a WebSocket server, sends a message upon connection, and listens for incoming
+    messages.</p>
+<h2 id="building-a-websocket-server-in-php">Building a WebSocket Server in PHP</h2>
+<p>To establish a WebSocket server in PHP, we need to:</p>
+<ol>
+    <li>Set up a socket server.</li>
+    <li>Perform a WebSocket handshake.</li>
+    <li>Handle client messages.</li>
+    <li>Send messages back to clients.</li>
+</ol>
+<h3 id="example-php-websocket-server">Example PHP WebSocket Server</h3>
+<p>Below is a basic PHP WebSocket server:</p>
+<img src="https://svinfotech.net/sites/default/files/2025-02/socket_code.png" alt="socket code">
+<p>
+    <a href="https://github.com/CHANCENY/sockets/blob/main/socket2.php">See socket code example</a>
+</p>
+<h2 id="using-the-provided-php-websocket-package-as-a-reference">Using the Provided PHP WebSocket Code</h2>
+<p>If you are looking for a more complete implementation, the PHP WebSocket package included in this blog provides a
+    working example of:</p>
+<ul>
+    <li>A <strong>WebSocket server</strong> in PHP.</li>
+    <li>A <strong>JavaScript client</strong> using the WebSocket API.</li>
+    <li><strong>Proper WebSocket handshake handling</strong>.</li>
+    <li><strong>Broadcasting messages to multiple clients</strong>.</li>
+</ul>
+<p>By studying this package, you can:</p>
+<ul>
+    <li>Extend it for <strong>real-time chat applications</strong>.</li>
+    <li>Implement <strong>real-time notifications</strong>.</li>
+    <li>Learn how <strong>PHP sockets work with WebSockets</strong>.</li>
+</ul>
+
+<p>
+    <a href="https://github.com/CHANCENY/sockets/tree/main">Clone this reference code from here</a>
+</p>
+
+<p>WebSockets in PHP might not be as common as in Node.js, but they can be powerful for real-time communication when
+    implemented correctly. With proper understanding of PHP sockets and the WebSocket API in JavaScript, you can create
+    efficient real-time applications. The provided package serves as an excellent reference to get started.
+</p>
+
+
+</body>
+</html>
